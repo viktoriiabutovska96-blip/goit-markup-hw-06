@@ -170,6 +170,7 @@ ol {
 
 .mob-address-link {
     font-weight: 500;
+    font-style: normal;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -283,12 +284,6 @@ ol {
     background-repeat: no-repeat;
     background-size: cover;
 
-    @media  screen and (min-resolution: 2x), (~webkit-min-device-pixel-ratio: 2) {
-        background-image: linear-gradient(to right,
-                rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)),
-            url("../images/hero_image_mob2x.jpg");
-    }
 }
 
 
@@ -912,6 +907,16 @@ a {
     visibility: hidden;
 }
 
+/* .modal-text {
+    display: flex;
+    align-items: center;
+}
+
+.modal-text-span, 
+.privacy-policy {
+    display: block;
+} */
+
 .modal-check-span {
     display: flex;
     align-items: center;
@@ -1222,6 +1227,7 @@ a {
         height: 80px;
         gap: 16px;
         column-gap: 24px;
+        margin-left: 0;
     }
     
     .subscribe-input {
@@ -1394,8 +1400,8 @@ a {
         margin-bottom: 48px;
     }
     .section-main {
-        padding-top: 188px;
-        padding-bottom: 188px;
+        padding-top: 68px;
+        padding-bottom: 68px;
         max-width: 1440px;
         background-image: linear-gradient(to right,
                 rgba(46, 47, 66, 0.7),
@@ -1638,7 +1644,8 @@ a {
     }
 }
 
-@media screen and (min-resolution: 2x)/(~webkit-min-device-pixel-ratio: 2) {
+@media screen and (min-width: 1158px) and (min-resolution: 2x),
+(~webkit-min-device-pixel-ratio: 2) {
     .section-main {
         background-image: linear-gradient(to right,
                 rgba(46, 47, 66, 0.7),
@@ -1647,3 +1654,18 @@ a {
     }
 }
 
+ @media screen and (min-width: 320px) and (min-resolution: 2x),
+ (~webkit-min-device-pixel-ratio: 2) {
+     background-image: linear-gradient(to right,
+         rgba(46, 47, 66, 0.7),
+         rgba(46, 47, 66, 0.7)),
+     url("../images/hero_image_mob2x.jpg");
+ }
+
+ @media screen and (min-width: 768px) and (min-resolution: 2x),
+ (~webkit-min-device-pixel-ratio: 2) {
+     background-image: linear-gradient(to right,
+         rgba(46, 47, 66, 0.7),
+         rgba(46, 47, 66, 0.7)),
+     url("../images/hero_image_tab2x.jpg");
+ }
