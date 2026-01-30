@@ -34,6 +34,7 @@ ol {
 }
 
 .header {
+    height: 56px;
     border-bottom: 1px solid #E7E9FC;
     box-shadow:
         0 1px 6px 0 rgba(46, 47, 66, 0.08),
@@ -92,6 +93,9 @@ ol {
 
 
 .header-logo {
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-family: Raleway;
     font-weight: 700;
     font-size: 18px;
@@ -272,6 +276,7 @@ ol {
     padding-top: 72px;
     padding-bottom: 72px;
     min-width: 320px;
+    max-width: 767px;
     margin: 0 auto;
     box-shadow:
         0px 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -309,12 +314,15 @@ ol {
     overflow: hidden;
 }
 
+.section-features {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
 .section-features-list {
     display: flex;
     flex-wrap: wrap;
     gap: 72px;
-    padding-top: 96px;
-    padding-bottom: 96px;
 }
 
 .wrap {
@@ -407,8 +415,6 @@ ol {
 
 .section-team {
     background-color: #F4F4FD;
-    padding-left: 12px;
-    padding-right: 12px;
     padding-top: 96px;
     padding-bottom: 96px;
 }
@@ -866,7 +872,14 @@ img {
     align-items: center;
 }
 
-.modal-check:checked+.modal-check-label span {
+/* .modal-check:checked+.modal-check-label span {
+    background-color: #404bbf;
+    border-radius: 2px;
+    border: 1px solid #404bbf;
+    fill: #f4f4fd;
+} */
+
+.modal-check:checked+.modal-check-span {
     background-color: #404bbf;
     border-radius: 2px;
     border: 1px solid #404bbf;
@@ -880,7 +893,7 @@ a {
     color: #4d5ae5;
 }
 
-.modal-check-label span {
+.modal-check-span {
     width: 16px;
     height: 16px;
     border-radius: 2px;
@@ -1149,6 +1162,7 @@ a {
         padding-top: 112px;
         padding-bottom: 112px;
         min-width: 768px;
+        max-width: 1157px;
         background-image: linear-gradient(to right,
                 rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
@@ -1211,6 +1225,7 @@ a {
 
     .social-links-title {
         text-align: left;
+        margin-bottom: 0;
     }
    
     
@@ -1223,8 +1238,8 @@ a {
     .subscribe {
         flex-direction: column;
         align-self: start;
-        width: 453px;
-        height: 80px;
+        /* width: 453px;
+        height: 80px; */
         gap: 16px;
         column-gap: 24px;
         margin-left: 0;
@@ -1237,6 +1252,7 @@ a {
     
     .subscribe-title {
         text-align: left;
+        margin-bottom: 0;
     }
     
     .subscribe-form {
@@ -1399,9 +1415,16 @@ a {
         width: 496px;
         margin-bottom: 48px;
     }
+
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
     .section-main {
-        padding-top: 68px;
-        padding-bottom: 68px;
+        padding-top: 188px;
+        padding-bottom: 188px;
+        min-width: 1158px;
         max-width: 1440px;
         background-image: linear-gradient(to right,
                 rgba(46, 47, 66, 0.7),
@@ -1444,10 +1467,7 @@ a {
         line-height: 1.5;
         letter-spacing: 0.02em;
     }
-    .section {
-        padding-top: 120px;
-        padding-bottom: 120px;
-    }
+   
     .section-features-list-item-title {
         font-size: 20px;
         font-weight: 500;
@@ -1516,6 +1536,10 @@ a {
         margin-right: 80px;
     }
 
+    .social-links-title {
+        margin-bottom: 0;
+    }
+
     .subscribe-title {
         font-family: "Roboto", sans-serif;
         font-weight: 500;
@@ -1523,7 +1547,7 @@ a {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #fff;
-        margin-bottom: 16px;
+        margin-bottom: 0;
     }
 
     .subscribe-input {
@@ -1540,17 +1564,6 @@ a {
         outline: none;
         background-color: transparent;
         transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .subscribe-title {
-        text-align: left;
-        font-family: "Roboto", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #fff;
-        margin-bottom: 16px;
     }
 
     .subscribe-input:hover,
@@ -1644,7 +1657,7 @@ a {
     }
 }
 
-@media screen and (min-width: 1158px) and (min-resolution: 2x),
+@media screen and (min-resolution: 2x),
 (~webkit-min-device-pixel-ratio: 2) {
     .section-main {
         background-image: linear-gradient(to right,
@@ -1654,18 +1667,22 @@ a {
     }
 }
 
- @media screen and (min-width: 320px) and (min-resolution: 2x),
+ @media screen and (min-resolution: 2x),
  (~webkit-min-device-pixel-ratio: 2) {
+    .section-main {
      background-image: linear-gradient(to right,
          rgba(46, 47, 66, 0.7),
          rgba(46, 47, 66, 0.7)),
      url("../images/hero_image_mob2x.jpg");
+    }
  }
 
- @media screen and (min-width: 768px) and (min-resolution: 2x),
+ @media screen and (min-resolution: 2x),
  (~webkit-min-device-pixel-ratio: 2) {
+    .section-main {
      background-image: linear-gradient(to right,
          rgba(46, 47, 66, 0.7),
          rgba(46, 47, 66, 0.7)),
      url("../images/hero_image_tab2x.jpg");
+    }
  }
